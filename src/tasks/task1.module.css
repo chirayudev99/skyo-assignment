@@ -1,0 +1,61 @@
+.autocompleteContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .suggestionsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px; /* Add a max-height to allow scrolling */
+    overflow-y: auto;  /* Enable scrolling */
+    z-index: 1000;
+  }
+  
+  
+  .suggestionItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestionItem:hover,
+  .active {
+    background-color: #f0f0f0;
+  }
+  
+  .noSuggestions {
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 600px) {
+    .autocompleteContainer {
+      max-width: 100%;
+    }
+  
+    .inputField {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .suggestionItem {
+      padding: 8px;
+    }
+  }
+  
