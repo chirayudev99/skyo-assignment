@@ -49,7 +49,6 @@
     }
   }
   
-  /* Modal responsiveness */
   @media (max-width: 576px) {
     .modalContent {
       width: 90%;

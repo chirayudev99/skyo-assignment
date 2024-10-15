@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Modal from './modal';  // Import the modal component
+import Modal from './modal';
 import styles from './task2.module.css';
 
 function CardGrid() {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState(null);
-  const [selectedCard, setSelectedCard] = useState(null);  // To handle the selected card for the modal
-  const [isModalOpen, setIsModalOpen] = useState(false);  // Modal visibility state
+  const [selectedCard, setSelectedCard] = useState(null); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,11 +26,11 @@ function CardGrid() {
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
-    setIsModalOpen(true);  // Open the modal
+    setIsModalOpen(true); 
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);  // Close the modal
+    setIsModalOpen(false);
   };
 
   if (error) {

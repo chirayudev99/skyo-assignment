@@ -7,7 +7,6 @@ function Autocomplete() {
   const [debouncedQuery, setDebouncedQuery] = useState(query);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(-1);
 
-  // Refs to track the active suggestion element
   const activeSuggestionRef = useRef(null);
 
   useEffect(() => {
@@ -94,7 +93,7 @@ function Autocomplete() {
                   ? `${styles.suggestionItem} ${styles.active}`
                   : styles.suggestionItem
               }
-              onMouseDown={() => handleSuggestionClick(meal)} // Use onMouseDown to avoid losing focus
+              onMouseDown={() => handleSuggestionClick(meal)}
             >
               {meal.strMeal}
             </li>
